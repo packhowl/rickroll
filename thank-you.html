@@ -40,15 +40,20 @@
   }
 
   .video-wrapper {
-    position: relative;
-    width: 100%;
-    max-width: 560px;
-    aspect-ratio: 16 / 9;
-    background: #ff1493;
-    padding: 10px;
-    border-radius: 10px;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
-  }
+  width: 100%;
+  max-width: 560px;
+  background: #ff1493;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+}
+
+.video-wrapper video {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  display: block;
+}
 
   .video-wrapper iframe {
     width: 100%;
@@ -86,10 +91,12 @@
 </style>
 </head>
 <body>
-  <div class="container">
-    <div class="video-wrapper">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=vEI0Ho8O5dYMOleA&autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </div>
+<div class="video-wrapper">
+  <video controls playsinline preload="metadata" poster="poster.jpg">
+    <source src="shortrick.mp4" type="video/mp4">
+    <source src="shortrick.webm" type="video/webm">
+  </video>
+</div>
 
     <div class="message">
       Thank you for being the first humans we see in the mornings, sometimes the last we see in the day, and being a second home for us.
